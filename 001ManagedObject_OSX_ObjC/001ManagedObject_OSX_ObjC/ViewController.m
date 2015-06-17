@@ -24,13 +24,73 @@
 
 - (IBAction)btnCreatedObject:(id)sender {  
   
-  NSManagedObjectContext *context = ((AppDelegate *) [[NSApplication sharedApplication] delegate]).managedObjectContext;
-  NSManagedObject *myMO = [NSEntityDescription insertNewObjectForEntityForName:@"Course" inManagedObjectContext:context];
+
+  AppDelegate *appDelegate = (AppDelegate *)[[NSApplication sharedApplication] delegate];
+  NSManagedObjectContext *context = appDelegate.managedObjectContext;
   
-  [myMO setValue:@"Curso de CoreData for iOS and OS X" forKey:@"title"];
-  [myMO setValue:@"Henry AT" forKey:@"author"];
-  [myMO setValue:[NSDate date] forKey:@"releaseDate"];
+  NSManagedObject *course = [NSEntityDescription insertNewObjectForEntityForName:@"Course" inManagedObjectContext:context];
+  
+  [course setValue:@"Curso de CoreData for iOS and OS X con Objetive-C" forKey:@"title"];
+  [course setValue:@"Henry AT" forKey:@"author"];
+  [course setValue:[NSDate date] forKey:@"releaseDate"];
   
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end
