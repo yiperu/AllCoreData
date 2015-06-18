@@ -14,6 +14,38 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    
+
+    let optionalSupportDirectoryURL = NSFileManager.defaultManager().URLForDirectory(.ApplicationSupportDirectory, inDomain: .AllDomainsMask, appropriateForURL: nil, create: true, error: nil)
+  println(optionalSupportDirectoryURL)
+/*
+    var error: NSError?
+    let documentURL : NSURL = NSFileManager.defaultManager().URLForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomain: NSSearchPathDomainMask.UserDomainMask, appropriateForURL: nil, create: true, error: &error)
+    var isDirectory: ObjCBool = ObjCBool(0)
+    if NSFileManager.defaultManager().fileExistsAtPath(documentURL.path, isDirectory: &isDirectory) {
+    println(isDirectory)
+    }
+*/
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//  NSLog(@"Documents Directory:|%@|",[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]);
   }
 
   override func didReceiveMemoryWarning() {
