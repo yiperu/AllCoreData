@@ -65,6 +65,17 @@ class ViewController: UIViewController {
     course.setValue("Henry", forKey: "author")
     course.setValue(NSDate(), forKey: "releaseDate")
     
+    // Ahora Grabamos:
+    
+      var error: NSError?
+    
+    
+      if((context?.save(&error)) != nil){
+        println("Todo se grabo OK..")
+      }else{
+        println("An Error! \(error!.localizedDescription)")
+      }
+    
   }
   
   

@@ -33,7 +33,14 @@
   [course setValue:@"Curso de CoreData for iOS and OS X con Objetive-C" forKey:@"title"];
   [course setValue:@"Henry AT" forKey:@"author"];
   [course setValue:[NSDate date] forKey:@"releaseDate"];
+ // Ahora grabaremos, para no tener la necesidad de salir del Simulador
+  NSError *error = nil;
   
+  if (![context save:&error]) {
+    NSLog(@"An Error! %@",error);
+  } else{
+    NSLog(@"Todo se grabo OK..");
+  }
   
 }
 

@@ -34,7 +34,26 @@ class ViewController: NSViewController {
     course.setValue("Henry", forKey: "author")
     course.setValue(NSDate(), forKey: "releaseDate")
 
+    // Ahora grabaremos, para no tener la necesidad de salir del Simulador
+    var error: NSError?
+    
 
+    if((context?.save(&error)) != nil){
+      println("Todo se grabo OK..")
+    }else{
+      println("An Error! \(error!.localizedDescription)")
+    }
+    
+    
+//    NSError *error = nil
+//    
+//    if (![context save:&error]) {
+//      NSLog(@"An Error! %@",error);
+//    } else{
+//      NSLog(@"Todo se grabo OK..");
+//    }
+    
+    
   }
   
   
